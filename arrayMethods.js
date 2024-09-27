@@ -20,12 +20,17 @@ function swapFirstAndLast(oldArray) {
 }
 
 
-
 // Challenge 2: Write a function called squareFirstIndex that takes in an array as a parameter.
 // Return the square of a number held at the first index.
 
-
-
+function squareFirstIndex(myArray) {
+    if (Array.isArray(myArray) && myArray.length >= 1 && typeof(myArray[0]) == 'number') {
+        let firstIndex = myArray[0];
+        return firstIndex ** 2; // square first index
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 // Challenge 3: Write a function called getLongerArray that takes in two arrays as parameters.
@@ -185,5 +190,6 @@ function swapFirstAndLast(oldArray) {
 
 
 module.exports = {
-    swapFirstAndLast
+    swapFirstAndLast,
+    squareFirstIndex
 };
