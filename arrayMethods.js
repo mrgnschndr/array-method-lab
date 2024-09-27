@@ -36,8 +36,14 @@ function squareFirstIndex(myArray) {
 // Challenge 3: Write a function called getLongerArray that takes in two arrays as parameters.
 // Use a ternary operator and return the array that is longer.
 
-
-
+function getLongerArray(arrayA, arrayB) {
+    if (Array.isArray(arrayA) && Array.isArray(arrayB) && (arrayA.length != arrayB.length)) {
+        let longerArray = (arrayA.length > arrayB.length) ? arrayA : arrayB;
+        return longerArray
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 // Challenge 4: Write a function called arrayHasValue that takes in a value and an array.
@@ -191,5 +197,6 @@ function squareFirstIndex(myArray) {
 
 module.exports = {
     swapFirstAndLast,
-    squareFirstIndex
+    squareFirstIndex,
+    getLongerArray,
 };
