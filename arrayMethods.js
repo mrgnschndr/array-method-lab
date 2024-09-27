@@ -1,29 +1,41 @@
 // NOTE: If an input is invalid, simply return the string "Invalid input"
 
 
-// Write a function called swapFirstAndLast that takes in an array as a parameter.
+// Challenge 1: Write a function called swapFirstAndLast that takes in an array as a parameter.
 // Swap the values of the first and last index without using array destructuring.
 // Return the updated array
 
+function swapFirstAndLast(oldArray) {
+    if (Array.isArray(oldArray) && oldArray.length > 1) {
+        let newArray = oldArray.slice();
+        let lastIndex = newArray.length - 1;
+        let newFirst = newArray[lastIndex];
+        let newLast = newArray[0];
+        newArray[0] = newFirst;
+        newArray[lastIndex] = newLast;
+        return newArray;
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 
-
-// Write a function called squareFirstIndex that takes in an array as a parameter.
+// Challenge 2: Write a function called squareFirstIndex that takes in an array as a parameter.
 // Return the square of a number held at the first index.
 
 
 
 
 
-// Write a function called getLongerArray that takes in two arrays as parameters.
+// Challenge 3: Write a function called getLongerArray that takes in two arrays as parameters.
 // Use a ternary operator and return the array that is longer.
 
 
 
 
 
-// Write a function called arrayHasValue that takes in a value and an array.
+// Challenge 4: Write a function called arrayHasValue that takes in a value and an array.
 // Return a boolean if the value exists in the array.
 
 
@@ -33,7 +45,7 @@
 
 
 
-// Write a function called getLastIndexOf that takes an array and a value as parameters.
+// Challenge 5: Write a function called getLastIndexOf that takes an array and a value as parameters.
 // Return the highest index number where that value was found (ie the furthest point it exists in the array)
 
 
@@ -42,7 +54,7 @@
 
 
 
-// Write a function called getNumberOfTimes that takes in an array and a string.
+// Challenge 6: Write a function called getNumberOfTimes that takes in an array and a string.
 // Return a count of how many times the string exists in the array.
 
 
@@ -51,7 +63,7 @@
 
 
 
-// Write a function called findAboveFreezing that takes in an array
+// Challenge 7: Write a function called findAboveFreezing that takes in an array
 // Return a string literal that says "Temperature found was ---- degrees Farenheit."
 
 
@@ -61,7 +73,7 @@
 
 
 
-// Write a function called returnString that takes an array as a parameter.
+// Challenge 8: Write a function called returnString that takes an array as a parameter.
 // Return the array as a string with an ampersand as the separator.
 
 
@@ -70,7 +82,7 @@
 
 
 
-// Write a function called sortArrayBasedOnNumber that takes in an array and a number.
+// Challenge 9: Write a function called sortArrayBasedOnNumber that takes in an array and a number.
 // Arrays must only contain one data type.
 // If the number is odd, return the array sorted in descending order.
 // If the number is even, return the array sorted in ascending order
@@ -80,7 +92,7 @@
 
 
 
-// Write a function called concatArrays that takes in two arrays as parameters.
+// Challenge 10: Write a function called concatArrays that takes in two arrays as parameters.
 // Return the concatonation of the two arrays in order as long as neither holds a string as a value at any index.
 
 
@@ -90,7 +102,7 @@
 
 
 
-// Write a function called popAndShift that takes in an array as a parameter.
+// Challenge 11: Write a function called popAndShift that takes in an array as a parameter.
 // Example input versus output:
 // Original input array: ["yelow", "green", "blue", "red"]
 // Intended output array: ["red", "yellow", "green", "blue"]
@@ -101,7 +113,7 @@
 
 
 
-// Write a function called oddValuesAtEvenIndex that takes an array as a parameter
+// Challenge 12: Write a function called oddValuesAtEvenIndex that takes an array as a parameter
 // Return a new array that contains all the odd values of the original array that were located at an even index.
 
 
@@ -110,7 +122,7 @@
 
 
 
-// Write a function called getUpperCase that takes in an array as a parameter.
+// Challenge 13: Write a function called getUpperCase that takes in an array as a parameter.
 // Translate all strings in the array to upper case.
 // Return only an array of only the string values.
 
@@ -121,7 +133,7 @@
 
 
 
-// Write a function called deleteAllOddValues that takes in an array.
+// Challenge 14: Write a function called deleteAllOddValues that takes in an array.
 // Use the delete() array method to delete any odd numbers from the array, including any values that can be coerced into numbers.
 // Return the updated array.
 
@@ -133,7 +145,7 @@
 
 
 
-// Write a function called getCatNumber that takes in an array of nested arrays as a first parameter, and a string of a cat's name a the second parameter.
+// Challenge 15: Write a function called getCatNumber that takes in an array of nested arrays as a first parameter, and a string of a cat's name a the second parameter.
 // Return the age of the first cat found with that name.
 
 
@@ -172,3 +184,6 @@
 
 
 
+module.exports = {
+    swapFirstAndLast
+};
