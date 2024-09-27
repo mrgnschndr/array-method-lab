@@ -62,7 +62,14 @@ function arrayHasValue(value, myArray) {
 // Challenge 5: Write a function called getLastIndexOf that takes an array and a value as parameters.
 // Return the highest index number where that value was found (ie the furthest point it exists in the array)
 
-
+function getLastIndexOf(myArray, value) {
+    if (Array.isArray(myArray) && value) {
+        let highestIndex = myArray.lastIndexOf(value);
+        return highestIndex;
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 
@@ -203,4 +210,5 @@ module.exports = {
     squareFirstIndex,
     getLongerArray,
     arrayHasValue,
+    getLastIndexOf,
 };
