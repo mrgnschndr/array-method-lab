@@ -200,7 +200,19 @@ function popAndShift(myArray) {
 // Challenge 12: Write a function called oddValuesAtEvenIndex that takes an array as a parameter
 // Return a new array that contains all the odd values of the original array that were located at an even index.
 
-
+function oddValuesAtEvenIndex(myArray) {
+    if (Array.isArray(myArray)) {
+        let newArray = [];
+        for (i = 0; i < myArray.length; i = i + 2) {
+            if (myArray[i] % 2) {
+                newArray.push(myArray[i]);
+            }
+        }
+        return newArray;
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 
@@ -279,5 +291,6 @@ module.exports = {
     returnString,
     sortArrayBasedOnNumber,
     concatArrays,
-    popAndShift
+    popAndShift,
+    oddValuesAtEvenIndex
 };
