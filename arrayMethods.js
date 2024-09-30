@@ -159,15 +159,26 @@ function sortArrayBasedOnNumber(myArray, num) {
 }
 
 
-
 // Challenge 10: Write a function called concatArrays that takes in two arrays as parameters.
 // Return the concatonation of the two arrays in order as long as neither holds a string as a value at any index.
 
-
-
-
-
-
+function concatArrays(arrayOne, arrayTwo) {
+    if (Array.isArray(arrayOne) && Array.isArray(arrayTwo)) {
+        for (i = 0; i <= arrayOne.length - 1; i++) {
+            if (typeof(arrayOne[i]) == 'string') {
+                return 'Cannot concatenate arrays with strings';
+            }
+        }
+        for (j = 0; j <= arrayTwo.length - 1; j++) {
+            if (typeof(arrayTwo[j]) == 'string') {
+                return 'Cannot concatenate arrays with strings';
+            }
+        }
+        return arrayOne.concat(arrayTwo);
+    } else {
+        return 'Invalid input';
+    }   
+}
 
 
 // Challenge 11: Write a function called popAndShift that takes in an array as a parameter.
@@ -261,5 +272,6 @@ module.exports = {
     getNumberOfTimes,
     findAboveFreezing,
     returnString,
-    sortArrayBasedOnNumber
+    sortArrayBasedOnNumber,
+    concatArrays
 };
