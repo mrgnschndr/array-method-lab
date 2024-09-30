@@ -215,18 +215,24 @@ function oddValuesAtEvenIndex(myArray) {
 }
 
 
-
-
-
 // Challenge 13: Write a function called getUpperCase that takes in an array as a parameter.
 // Translate all strings in the array to upper case.
 // Return only an array of only the string values.
 
-
-
-
-
-
+function getUpperCase(myArray) {
+    if (Array.isArray(myArray)) {
+        let newArray = [];
+        for (let i = 0; i < myArray.length; i++) {
+            if (typeof(myArray[i]) == 'string') {
+                let upperString = myArray[i].toUpperCase();
+                newArray.push(upperString);
+            }
+        }
+        return newArray;
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 // Challenge 14: Write a function called deleteAllOddValues that takes in an array.
@@ -292,5 +298,6 @@ module.exports = {
     sortArrayBasedOnNumber,
     concatArrays,
     popAndShift,
-    oddValuesAtEvenIndex
+    oddValuesAtEvenIndex,
+    getUpperCase
 };
