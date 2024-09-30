@@ -121,16 +121,42 @@ function returnString(myArray) {
 }
 
 
-
-
-
 // Challenge 9: Write a function called sortArrayBasedOnNumber that takes in an array and a number.
 // Arrays must only contain one data type.
 // If the number is odd, return the array sorted in descending order.
 // If the number is even, return the array sorted in ascending order
 
-
-
+function sortArrayBasedOnNumber(myArray, num) {
+    if (Array.isArray(myArray)) {
+        let firstIndexType = typeof(myArray[0]);
+        for (i = 1; i < myArray.length; i++) {
+            let indexType = typeof(myArray[i]);
+            if (indexType != firstIndexType) {
+                i = 0;
+                break;
+            }
+        }
+        if (i != 0 && num % 2) {
+            if (firstIndexType == 'number') {
+                return myArray.sort(function(a,b){return b - a});
+            } else if (firstIndexType == 'string') {
+                let sorted = myArray.sort();
+                return sorted.reverse();
+            }
+        } else if (i != 0 && !(num % 2)) {
+            if (firstIndexType == 'number') {
+                let sorted = myArray.sort(function(a,b){return b - a});
+                return sorted.reverse();
+            } else if (firstIndexType == 'string') {
+                return myArray.sort();
+            }
+        } else {
+            return 'Invalid input';
+        }
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 
@@ -234,5 +260,6 @@ module.exports = {
     getLastIndexOf,
     getNumberOfTimes,
     findAboveFreezing,
-    returnString
+    returnString,
+    sortArrayBasedOnNumber
 };
