@@ -98,6 +98,7 @@ function findAboveFreezing(myArray) {
     if (Array.isArray(myArray)) {
         let tempCheck = myArray.find(aboveFreezingTest);
         return tempCheck;
+        return `Temperature found was ${tempCheck} degrees Farenheit.`
     } else {
         return 'Invalid input';
     }
