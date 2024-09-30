@@ -239,12 +239,18 @@ function getUpperCase(myArray) {
 // Use the delete() array method to delete any odd numbers from the array, including any values that can be coerced into numbers.
 // Return the updated array.
 
-
-
-
-
-
-
+function deleteAllOddValues(myArray) {
+    if (Array.isArray(myArray)) {
+        for (let i = 0; i < myArray.length; i++) {
+            if (Number(myArray[i]) % 2) {
+                delete myArray[i];
+            }
+        }
+        return myArray;
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 // Challenge 15: Write a function called getCatNumber that takes in an array of nested arrays as a first parameter, and a string of a cat's name a the second parameter.
@@ -299,5 +305,6 @@ module.exports = {
     concatArrays,
     popAndShift,
     oddValuesAtEvenIndex,
-    getUpperCase
+    getUpperCase,
+    deleteAllOddValues
 };
