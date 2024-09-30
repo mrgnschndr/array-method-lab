@@ -111,7 +111,14 @@ function aboveFreezingTest(temp) {
 // Challenge 8: Write a function called returnString that takes an array as a parameter.
 // Return the array as a string with an ampersand as the separator.
 
-
+function returnString(myArray) {
+    if (Array.isArray(myArray)) {
+        let newString = myArray.join("&");
+        return newString;
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 
@@ -226,5 +233,6 @@ module.exports = {
     arrayHasValue,
     getLastIndexOf,
     getNumberOfTimes,
-    findAboveFreezing
+    findAboveFreezing,
+    returnString
 };

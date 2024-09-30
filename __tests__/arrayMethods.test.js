@@ -6,7 +6,7 @@ const {
     getLastIndexOf,
     getNumberOfTimes,
     findAboveFreezing,
-    // returnString,
+    returnString,
     // sortArrayBasedOnNumber,
     // concatArrays,
     // popAndShift,
@@ -74,13 +74,13 @@ describe('JavaScript Array Methods Tests', () => {
         expect(findAboveFreezing('not an array')).toBe('Invalid input');
     });
 
-    // // Test for returnString
-    // test('returnString should return the array as a string with an ampersand as the separator', () => {
-    //     expect(returnString([1, 2, 3])).toBe('1&2&3');
-    //     expect(returnString(['a', 'b', 'c'])).toBe('a&b&c');
-    //     expect(returnString([])).toBe('');
-    //     expect(returnString('Potato')).toBe('Invalid input');
-    // });
+    // Test for returnString
+    test('returnString should return the array as a string with an ampersand as the separator', () => {
+       expect(returnString([1, 2, 3])).toBe('1&2&3');
+       expect(returnString(['a', 'b', 'c'])).toBe('a&b&c');
+       expect(returnString([])).toBe('');
+        expect(returnString('Potato')).toBe('Invalid input');
+    });
 
 
     // // Test for sortArrayBasedOnNumber
