@@ -72,16 +72,23 @@ function getLastIndexOf(myArray, value) {
 }
 
 
-
-
-
 // Challenge 6: Write a function called getNumberOfTimes that takes in an array and a string.
 // Return a count of how many times the string exists in the array.
 
-
-
-
-
+function getNumberOfTimes(myArray, str) {
+    if (Array.isArray(myArray) && myArray.length >= 1 && str && typeof(str) == 'string') {
+        let arrayString = myArray.toString();
+        var re = new RegExp(str, 'gi');
+        let matchArray = arrayString.match(re);
+        if (matchArray == null) {
+            return 0;
+        } else if (matchArray) {
+            return matchArray.length;
+        }
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 // Challenge 7: Write a function called findAboveFreezing that takes in an array
@@ -211,4 +218,5 @@ module.exports = {
     getLongerArray,
     arrayHasValue,
     getLastIndexOf,
+    getNumberOfTimes
 };
