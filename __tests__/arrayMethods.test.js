@@ -5,7 +5,7 @@ const {
     arrayHasValue,
     getLastIndexOf,
     getNumberOfTimes,
-    // findAboveFreezing,
+    findAboveFreezing,
     // returnString,
     // sortArrayBasedOnNumber,
     // concatArrays,
@@ -67,12 +67,12 @@ describe('JavaScript Array Methods Tests', () => {
         expect(getNumberOfTimes('not an array', 'cat')).toBe('Invalid input');
     });
 
-    // // Test for findAboveFreezing
-    // test('findAboveFreezing should return the first temperature above freezing', () => {
-    //     expect(findAboveFreezing([30, 32, 35, 40])).toBe(35);
-    //     expect(findAboveFreezing([20, 10, 5])).toBe(undefined);
-    //     expect(findAboveFreezing('not an array')).toBe('Invalid input');
-    // });
+    // Test for findAboveFreezing
+    test('findAboveFreezing should return the first temperature above freezing', () => {
+        expect(findAboveFreezing([30, 32, 35, 40])).toBe(35);
+        expect(findAboveFreezing([20, 10, 5])).toBe(undefined);
+        expect(findAboveFreezing('not an array')).toBe('Invalid input');
+    });
 
     // // Test for returnString
     // test('returnString should return the array as a string with an ampersand as the separator', () => {
