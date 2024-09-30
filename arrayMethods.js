@@ -186,10 +186,15 @@ function concatArrays(arrayOne, arrayTwo) {
 // Original input array: ["yelow", "green", "blue", "red"]
 // Intended output array: ["red", "yellow", "green", "blue"]
 
-
-
-
-
+function popAndShift(myArray) {
+    if (Array.isArray(myArray)) {
+        let popped = myArray.pop();
+        myArray.unshift(popped);
+        return myArray;
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 // Challenge 12: Write a function called oddValuesAtEvenIndex that takes an array as a parameter
@@ -273,5 +278,6 @@ module.exports = {
     findAboveFreezing,
     returnString,
     sortArrayBasedOnNumber,
-    concatArrays
+    concatArrays,
+    popAndShift
 };
