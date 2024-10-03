@@ -256,10 +256,20 @@ function deleteAllOddValues(myArray) {
 // Challenge 15: Write a function called getCatNumber that takes in an array of nested arrays as a first parameter, and a string of a cat's name a the second parameter.
 // Return the age of the first cat found with that name.
 
-
-
-
-
+function getCatNumber(arr, catName) {
+    if (Array.isArray(arr) && arr.length > 0) {
+        for (let i = 0; i < arr.length; i++) {
+            let ageCat = arr[i].indexOf(catName);
+            console.log(ageCat);
+            if (ageCat != -1) {
+                return arr[i][1];
+            }
+        }
+        return 'Cat not found';
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 // Stretch Goal #1:
@@ -306,5 +316,6 @@ module.exports = {
     popAndShift,
     oddValuesAtEvenIndex,
     getUpperCase,
-    deleteAllOddValues
+    deleteAllOddValues,
+    getCatNumber
 };
