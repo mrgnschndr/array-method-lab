@@ -15,7 +15,7 @@ const {
     deleteAllOddValues,
     getCatNumber,
     getPaginationArray,
-    // sparseToDense,
+    sparseToDense,
     // findAndConvertTemp
 } = require('../arrayMethods.js');
 
@@ -159,15 +159,15 @@ describe('JavaScript Array Methods Tests', () => {
         expect(getPaginationArray('not an array', 1)).toBe('Invalid input');
     });
 
-    // // Test for sparseToDense
-    // test('sparseToDense should convert sparse arrays to dense arrays', () => {
-    //     let sparseArray = [1, , 3, , 5];
-    //     let sparseArray2 = [1, , 2, null, 5];
-    //     expect(sparseToDense(sparseArray)).toEqual([1, 3, 5]);
-    //     expect(sparseToDense([1, null, 3])).toEqual([1, null, 3]);
-    //     expect(sparseToDense(sparseArray2)).toEqual([1, 2, null, 5])
-    //     expect(sparseToDense('not an array')).toBe('Invalid input');
-    // });
+    // Test for sparseToDense
+    test('sparseToDense should convert sparse arrays to dense arrays', () => {
+      let sparseArray = [1, , 3, , 5];
+      let sparseArray2 = [1, , 2, null, 5];
+        expect(sparseToDense(sparseArray)).toEqual([1, 3, 5]);
+        expect(sparseToDense([1, null, 3])).toEqual([1, null, 3]);
+        expect(sparseToDense(sparseArray2)).toEqual([1, 2, null, 5])
+        expect(sparseToDense('not an array')).toBe('Invalid input');
+    });
 
     // // Test for findAndConvertTemp
     // test('findAndConvertTemp should find the first temperature above the given value and convert it to Celsius', () => {
