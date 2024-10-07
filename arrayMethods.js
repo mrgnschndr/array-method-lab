@@ -277,7 +277,19 @@ function getCatNumber(arr, catName) {
 // Only five items from the array can be shown on a given web page when pagination is clicked. They must be grouped in their original order.
 // Return a new array. At each index of the new array will be the five items shown for each page of pagination.
 
-
+function getPaginationArray(arr, pageNum) {
+    if (Array.isArray(arr) && arr.length > 0 && typeof(pageNum) == 'number' && pageNum > 0) {
+        let maxPage = pageNum * 5;
+        maxPage -= 1;
+        if (maxPage > arr.length) {
+            return 'Page not found';
+        } else {
+            return [(arr[maxPage - 4]), (arr[maxPage - 3]), (arr[maxPage - 2]), (arr[maxPage - 1]), (arr[maxPage])];
+        }
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 
@@ -317,5 +329,6 @@ module.exports = {
     oddValuesAtEvenIndex,
     getUpperCase,
     deleteAllOddValues,
-    getCatNumber
+    getCatNumber,
+    getPaginationArray
 };
