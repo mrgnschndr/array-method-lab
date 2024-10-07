@@ -292,17 +292,25 @@ function getPaginationArray(arr, pageNum) {
 }
 
 
-
-
-
 // Stretch Goal #2:
 // Write a function called sparseToDense that takes in an array.
 // If the array is sparse, return a dense version of the array.
 // If the array is already dense, return the original array.
 
-
-
-
+function sparseToDense(arr) {
+    if (Array.isArray(arr) && arr.length > 0) {
+        let newArray = [];
+        for (i = 0; i < arr.length; i++) {
+            let select = arr[i];
+            if (select || select === null) {
+                newArray.push(select);
+            }
+        } 
+        return newArray;
+    } else {
+        return 'Invalid input';
+    }
+}
 
 
 
@@ -330,5 +338,6 @@ module.exports = {
     getUpperCase,
     deleteAllOddValues,
     getCatNumber,
-    getPaginationArray
+    getPaginationArray,
+    sparseToDense
 };
