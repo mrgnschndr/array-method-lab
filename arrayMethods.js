@@ -299,14 +299,8 @@ function getPaginationArray(arr, pageNum) {
 
 function sparseToDense(arr) {
     if (Array.isArray(arr) && arr.length > 0) {
-        let newArray = [];
-        for (i = 0; i < arr.length; i++) {
-            let select = arr[i];
-            if (select || select === null) {
-                newArray.push(select);
-            }
-        } 
-        return newArray;
+        const filteredArray = arr.filter(item => item !== undefined);
+        return filteredArray;
     } else {
         return 'Invalid input';
     }

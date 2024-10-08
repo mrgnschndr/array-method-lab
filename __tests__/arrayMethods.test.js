@@ -169,16 +169,16 @@ describe('JavaScript Array Methods Tests', () => {
         expect(sparseToDense('not an array')).toBe('Invalid input');
     });
 
-    // // Test for findAndConvertTemp
-    // test('findAndConvertTemp should find the first temperature above the given value and convert it to Celsius', () => {
-    //     let temperatures = [
-    //         [75, "2023-09-21"],
-    //         [82, "2023-09-22"],
-    //         [90, "2023-09-23"]
-    //     ];
-    //     expect(findAndConvertTemp(temperatures, 80)).toBe('Temperature was 27.78 degrees Celsius on date 2023-09-22.');
-    //     expect(findAndConvertTemp(temperatures, 100)).toBe('No temperature exceeded the input value.');
-    //     expect(findAndConvertTemp('not an array', 80)).toBe('Invalid input');
-    // });
+    // Test for findAndConvertTemp
+    /* test('findAndConvertTemp should find the first temperature above the given value and convert it to Celsius', () => {
+        let temperatures = [
+            [75, "2023-09-21"],
+            [82, "2023-09-22"],
+            [90, "2023-09-23"]
+        ];
+        expect(findAndConvertTemp(temperatures, 80)).toBe('Temperature was 27.78 degrees Celsius on date 2023-09-22.');
+        expect(findAndConvertTemp(temperatures, 100)).toBe('No temperature exceeded the input value.');
+        expect(findAndConvertTemp('not an array', 80)).toBe('Invalid input');
+    }); */
 
 });
